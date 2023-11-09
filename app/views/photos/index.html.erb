@@ -1,0 +1,16 @@
+<%= form_with url: photos_path, method: :get, local: true do |form| %>
+  <%= form.label :query %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<%= end %>
+
+<% if @photos %>
+  <div id="photos">
+    <% @photos['results'].each do |photo| %>
+      <div class="photo">
+        <%= image_tag photo['urls']['small'] %>
+        <p><%= photo['description'] || "No description available" %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
