@@ -1,7 +1,3 @@
-# Big Esty Bulk Shop
-[Bulk Discounts project page](https://backend.turing.edu/module2/projects/bulk_discounts/)
-
-
 # Little Esty Shop
 
 ## Background and Description

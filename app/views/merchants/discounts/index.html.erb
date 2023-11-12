@@ -1,8 +1,0 @@
-<h1><%= "Merchant '#{@merchant.name}' Discounts Index" %></h1>
-
-<% @merchant.discounts.each do |discount| %>
-  <p><%= "#{discount.id}. #{(discount.percentage * 100).round(0)}% off, after #{discount.quantity} of any item purchased" %></p>
-  <p>More about discount number <%= link_to "#{discount.id}", merchant_discount_path(@merchant, discount) %></p>
-<% end %>
-
-<%= link_to "Create a New Discount", new_merchant_discount_path%>
