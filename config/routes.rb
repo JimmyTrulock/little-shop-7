@@ -12,11 +12,14 @@ Rails.application.routes.draw do
     end
     
     resources :invoices, controller: "merchants/invoices", only: [:show, :index, :update]
+
+    resources :discounts, controller: "merchants/discounts", only: [:index, :show, :new, :create]
   end
 
   namespace :merchants do
     resources :invoices, only: [:index, :update]
     resources :items, only: :show
+    resources :discounts, only: [:index, :show, :new, :create]
   end
   
   root "merchants#index"
