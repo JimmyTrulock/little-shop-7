@@ -1,9 +1,0 @@
-<%= form_with url: merchant_discounts_path(@merchant), method: :post, local: true, data: { turbo: false } do |form| %>
-  <%= form.label :percentage %>
-  <%= form.text_field :percentage %>
-
-  <%= form.label :quantity %>
-  <%= form.text_field :quantity %>
-
-  <%= form.submit "Add Discount" %>
-<% end %>
