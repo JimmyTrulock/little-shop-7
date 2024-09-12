@@ -14,6 +14,8 @@
     <% flash.each do |type, message| %>
       <p><%= message %></p>
     <% end %>
+
+    <%= image_tag @photo_url, alt: "Random Unsplash Photo" %>
     <%= yield %>
   </body>
 </html>
